@@ -1,0 +1,166 @@
+/* style.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button#generateBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#generateBtn:hover {
+  background-color: #555;
+}
+
+.color-grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.color-box {
+  height: 120px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.05);
+}
+
+.color-box::after {
+  content: "Click to Copy";
+  position: absolute;
+  bottom: 8px;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* ========== Dark Mode Support ========== */
+body.dark {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+
+body.dark h1 {
+  color: #fff;
+}
+
+body.dark button#generateBtn,
+body.dark button#themeToggle {
+  background-color: #f1f1f1;
+  color: #111;
+}
+
+body.dark .color-box::after {
+  color: #ccc;
+}
+
+
+/* Button Group Flex Layout */
+.btn-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Shared Button Styles */
+.btn-group button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #555;
+}
+
+body.dark button#generateBtn,
+body.dark button#themeToggle,
+body.dark button#formatToggle {
+  background-color: #f1f1f1;
+  color: #111;
+}
+
+
+.color-box {
+  position: relative;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.heart-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.heart-btn:hover {
+  transform: scale(1.2);
+}
+.delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2px 5px;
+  border-radius: 5px;
+  user-select: none;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+  background-color: #ff6666;
+}
